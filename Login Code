@@ -1,0 +1,140 @@
+package Login;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JButton;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+import javax.swing.JSeparator;
+import java.awt.Color;
+import java.awt.Font;
+
+public class Login_Sys {
+
+	private JFrame frame;
+	private JTextField txtUsername;
+	private JPasswordField txtPassword;
+	protected JFrame frmLoginSystem;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Login_Sys window = new Login_Sys();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Login_Sys() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.LIGHT_GRAY);
+		frame.setBounds(200, 200, 519, 326);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblUsername = new JLabel("Username");
+		lblUsername.setBackground(Color.WHITE);
+		lblUsername.setBounds(59, 80, 89, 20);
+		frame.getContentPane().add(lblUsername);
+		
+		JLabel lblPassword = new JLabel("Password");
+		lblPassword.setBackground(Color.WHITE);
+		lblPassword.setBounds(59, 159, 89, 20);
+		frame.getContentPane().add(lblPassword);
+		
+		txtUsername = new JTextField();
+		txtUsername.setBounds(220, 77, 146, 26);
+		frame.getContentPane().add(txtUsername);
+		txtUsername.setColumns(10);
+		
+		txtPassword = new JPasswordField();
+		txtPassword.setBounds(220, 156, 146, 26);
+		frame.getContentPane().add(txtPassword);
+		
+		JLabel lblLoginSystem = new JLabel("Login System");
+		lblLoginSystem.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
+		lblLoginSystem.setBounds(170, 16, 154, 20);
+		frame.getContentPane().add(lblLoginSystem);
+		
+		JButton btnLogin =  new JButton("Login");
+		btnLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String password = txtPassword.getText();
+				String username = txtUsername.getText();
+				
+				if (password.contains("1999")&& username.contains("bruce")){
+					txtPassword.setText(null);
+					txtUsername.setText(null);
+					
+	     }
+				
+				else
+				{
+					JOptionPane.showMessageDialog(null, "Invalid Login Details","Login Error",JOptionPane.ERROR_MESSAGE);
+					txtPassword.setText(null);
+					txtUsername.setText(null);
+				}
+			}
+		});
+		btnLogin.setBounds(59, 225, 115, 29);
+		frame.getContentPane().add(btnLogin);
+		
+		JButton btnClear = new JButton("Clear");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				txtUsername.setText(null);
+				txtPassword.setText(null);
+			}
+		});
+		btnClear.setBounds(220, 225, 115, 29);
+		frame.getContentPane().add(btnClear);
+		
+		JButton btnExit = new JButton("Exit");
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				frmLoginSystem = new JFrame("Exit");
+				if (JOptionPane.showConfirmDialog(frmLoginSystem, "Confirm if you want to exit", "Login Systems",
+				JOptionPane.YES_NO_OPTION)== JOptionPane.YES_NO_OPTION){
+				System.exit(0);	
+				}
+			}
+		});
+		btnExit.setBounds(367, 225, 115, 29);
+		frame.getContentPane().add(btnExit);
+		
+		JSeparator separator = new JSeparator();
+		separator.setBounds(59, 201, 423, 8);
+		frame.getContentPane().add(separator);
+		
+		JSeparator separator_1 = new JSeparator();
+		separator_1.setBounds(59, 55, 423, 8);
+		frame.getContentPane().add(separator_1);
+	}
+}
