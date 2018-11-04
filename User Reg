@@ -52,7 +52,7 @@ public class UserReg extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 51, 51));
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(36, 37, 42));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
 
@@ -76,7 +76,7 @@ public class UserReg extends javax.swing.JFrame {
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel2.setBackground(new java.awt.Color(108, 122, 137));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel2.setText("FULL NAMES:");
@@ -91,20 +91,26 @@ public class UserReg extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel4.setText("GENRES");
 
+        jCheckBox1.setBackground(new java.awt.Color(108, 122, 137));
         jCheckBox1.setText("ARCADE");
         jCheckBox1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
+        jCheckBox2.setBackground(new java.awt.Color(108, 122, 137));
         jCheckBox2.setText("COMBAT");
 
+        jCheckBox3.setBackground(new java.awt.Color(108, 122, 137));
         jCheckBox3.setText("RACING");
 
+        jCheckBox4.setBackground(new java.awt.Color(108, 122, 137));
         jCheckBox4.setText("STORY");
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel5.setText("PAYMENT METHOD");
 
+        jRadioButton1.setBackground(new java.awt.Color(108, 122, 137));
         jRadioButton1.setText("CASH");
 
+        jRadioButton2.setBackground(new java.awt.Color(108, 122, 137));
         jRadioButton2.setText("MPESA");
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -357,3 +363,4 @@ public class UserReg extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     // End of variables declaration                   
 }
+//olga
