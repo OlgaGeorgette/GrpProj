@@ -1,0 +1,69 @@
+ /*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package login;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import java.awt.event.KeyEvent;
+
+
+
+/**
+ *
+ * @author hp
+ */
+public class Dashboard extends JFrame{
+    public Dashboard() {
+        setTitle("Dashboard");
+        JMenuBar menubar = new JMenuBar();
+        JMenu file = new JMenu("Category");
+        JMenu fav = new JMenu ("Favourites");
+        JMenu hel = new JMenu ("Help");
+        JMenu prof = new JMenu ("Profile");
+        JMenu not = new JMenu ("Notification");
+        file.setMnemonic(KeyEvent.VK_F);
+        JMenuItem fileRacing = new JMenuItem("Racing");
+        JMenuItem fileCombat = new JMenuItem("Combat");
+        JMenuItem fileArcade = new JMenuItem ("Arcade");
+        JMenuItem fileClose = new JMenuItem("Close");
+        JMenuItem profPersonal = new JMenuItem ("Personal");
+        JMenuItem profCareer = new JMenuItem ("Career");
+        fileClose.setMnemonic(KeyEvent.VK_C);
+        fileClose.setToolTipText("Exit application");
+        fileClose.addActionListener(new ActionListener(){
+            @Override
+    public void actionPerformed(ActionEvent event) {
+                System.exit(0);
+            }
+        });
+        
+        file.add (fileRacing);
+        file.add (fileCombat);
+        file.add (fileArcade);
+        file.add (fileClose);
+        prof.add (profPersonal);
+        prof.add (profCareer);
+        menubar.add(file);
+        menubar.add(prof);
+        menubar.add(fav);
+        menubar.add(hel);
+        setJMenuBar(menubar);
+        setSize(250, 200);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+    public static void main(String[] args) {
+        new Dashboard();
+    }
+}
